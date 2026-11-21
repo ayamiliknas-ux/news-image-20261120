@@ -1,4 +1,5 @@
 # news-image-20261120: draw a newspaper-style infographic of Nov 20 2026 world news
+import os
 from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1024, 1024
@@ -6,7 +7,7 @@ INK = (18, 18, 22)
 PAPER = (246, 243, 235)
 ACCENT = (156, 22, 22)
 GOLD = (255, 210, 120)
-FD = "/usr/share/fonts/truetype/dejavu/"
+FD = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts", "")
 def F(name, size): return ImageFont.truetype(FD + name, size)
 
 img = Image.new("RGB", (W, H), PAPER)
