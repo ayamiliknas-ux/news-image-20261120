@@ -1,0 +1,5 @@
+sessions_export/
+prompt.txt
+system_prompt.txt
+__pycache__/
+out*/
